@@ -570,12 +570,14 @@ img[src="./assets/Group 3 (1).png"]{
 
 /* footer section */
 .footer-rev-wrapper{
+  width: 1440px;
   background-color: #1E3448;
   height: 300px;
   position: relative;
 }
 img[src="./assets/Group 2 (3).png"]{
   position: absolute;
+  width: 534px;
   right: -68px;
 }
 .footer-rev{
