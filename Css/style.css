@@ -394,7 +394,7 @@ line-height: 32px;
 .professional-box p{
   margin: 24px;
 }
-.custom-btn {
+div.custom-btn {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -431,8 +431,13 @@ margin-top: 296px;
 }
 img[src="./assets/Group 2 (1).png"]{
   position: absolute;
-  /* top: -400px; */
+  right: 0;
+  bottom: 0;
 }
+img[src="./assets/Group 3.png"]{
+  /* bottom: px; */
+}
+
 .price-footer-container{
   width: 486px;
   height: 356px;
@@ -528,7 +533,6 @@ img[src="./assets/Group 2 (1).png"]{
   font-family: var(--bold--);
   line-height: 32px;
   position: relative;
-  background-color: ;
 }
 .faq-header img{
   position: relative;
@@ -559,18 +563,18 @@ img[src="./assets/plus.svg"], img[src="./assets/minus.svg"]{
 }
 img[src="./assets/Group 2 (2).png"]{
   position: absolute;
-  right: -72px;
+  right: 0px;
  margin-top: -384px;
 }
 img[src="./assets/Group 3 (1).png"]{
   position: absolute;
   left: -682px;
-  top: -56px;
+  bottom: 0px;
 }
 
 /* footer section */
 .footer-rev-wrapper{
-  width: 1440px;
+  /* width: 1440px; */
   background-color: #1E3448;
   height: 300px;
   position: relative;
@@ -578,7 +582,8 @@ img[src="./assets/Group 3 (1).png"]{
 img[src="./assets/Group 2 (3).png"]{
   position: absolute;
   width: 534px;
-  right: -68px;
+  right: 0px;
+  bottom: 0;
 }
 .footer-rev{
   margin: 159px 324px 104px; 
@@ -668,10 +673,21 @@ margin-bottom: 24px;
 .terms{
   display: flex;
   gap: 8px;
+  position: absolute;
   margin-top: 24px;
-  margin-left: 1030px;
-  margin-bottom: 42px;
+  margin-left: 1020px;
+  top: 5940px;
   padding: 0 12px;
   font-family: var(--medium--);
   font-size: 0.9rem;
+}
+img[src="./assets/Group 3 (3).png"]{
+  position: absolute;
+  top: 5516px;
+}
+
+img[src="./assets/Group 2 (4).png"]{
+  position: absolute;
+  right: 0;
+  bottom: -5506px;
 }
