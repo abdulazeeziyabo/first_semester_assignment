@@ -2,6 +2,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+
 }
 body{
   --bold--: 'Gilroy-Bold', sans-serif;
@@ -10,6 +11,12 @@ body{
     --medium--: 'Gilroy-Medium', sans-serif;
     --regular--: 'Gilroy-Regular', sans-serif
 }
+/* body::-webkit-scrollbar {
+  display: none;} */
+body{
+  overflow-x: hidden;
+}
+
 
 /* hero section */
 .hero-section{
@@ -20,6 +27,8 @@ background-size: cover;
 display: block;
 height: auto;
 position: relative;
+overflow: hidden;
+width: 100%;
 
 }
  
@@ -53,7 +62,7 @@ position: relative;
  margin-right: 18px;
 }
 
-.nav-login{
+a.nav-login{
  margin-left: 144px;
  margin-right: 12px;
  color: #0065FE;
@@ -580,15 +589,31 @@ line-height: 24px;
 }
 
 @media(max-width: 1000px) {
-  .nav-container {
-    display: block;
+  .hero-section{
+    width: 900px;
     background-size: cover;
+    overflow: hidden;
+    
+    
+
+    /* object-fit: cover;
+    overflow-y: hidden; */
   }
+  .nav-container {
+    display: inline-block;
+    background-size: cover;
+    object-fit: cover;
+    overflow-y: hidden;
+  }
+    a.nav-login{
+      margin-left: 0;
+    }
 
   a.nav-free {
     max-width: 72px;
     width: 100%;
     padding: 12px;
+    margin-left: 0;
   }
 
   .group {
@@ -599,20 +624,20 @@ line-height: 24px;
 
   .rectangle {
     display: block;
-    width: 91%;
-    height: auto
+    width:100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .ellipse {
     display: block;
-    max-width: 700px;
-    width: 50%;
+    width: 60%;
     height: auto
   }
 
   /* desktop section */
   .desktop-header {
-  max-width: 850px;
+  /* max-width: 880px; */
   width: 100%;
 
   }
@@ -621,6 +646,7 @@ line-height: 24px;
     display: inline-flex;
     gap: 30px;
     align-items: center;
+    object-fit: cover;
 
   }
 
@@ -649,7 +675,7 @@ line-height: 24px;
 
   .scissor-container {
     margin-top: 70px;
-    margin-left: 70px;
+    margin-left: 180px;
   }
 
   /* price section */
@@ -735,5 +761,15 @@ line-height: 24px;
 }
 .footer-image3, .footer-image4{
   display: none;
+}
+}
+@media(max-width: 400px){
+  div.nav-container{
+    margin-left: 24px;
+    padding: 8px;
+  }
+main p{
+  width: 100%;
+  font-size: 1rem;
 }
 }

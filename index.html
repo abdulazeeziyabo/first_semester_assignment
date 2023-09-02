@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learning</title>
+  <title>First Semester Assignment</title>
   <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,12 +19,13 @@
       <img src="./assets/Logo.png" alt="Nav-logo Image" class="nav-logo">
       <!-- <i class="fa-solid fa-bars"></i> -->
       <p class="nav-url">My URLs</p>
-      <p class="nav-features">Features <img src="./assets/Vector.png" alt="Arrow down Image"></p>
-      <p class="nav-pricing">Pricing</p>
+      <p class="nav-features"><a href="#Why-scissor">Features </a><img src="./assets/Vector.png"
+          alt="Arrow down Image"></p>
+      <p class="nav-pricing"><a href="#price">Pricing</a></p>
       <p class="nav-analytics">Analytics</p>
-      <p>FAQs</p>
+      <p><a href="#FAQ">FAQs</a></p>
       <a href="" class="nav-login">Login</a>
-      <a href="" class="nav-free">Try for free</a>
+      <a href="#free" class="nav-free">Try for free</a>
     </div>
     </div>
 
@@ -61,7 +62,8 @@
       </div>
     </div>
     <div class="choose">
-      <h2><img src="./assets/Line 70.png" alt="A line image" class="line">Why choose <strong>Scissors</strong></h2>
+      <h2><img src="./assets/Line 70.png" alt="A line image" class="line" id="Why-scissor">Why choose
+        <strong>Scissors</strong></h2>
       <p class="choose-body">Scissors is the hub of everything that has to do with your link management. We shorten your
         URLs, allow you creating
         custom ones for your personal, business, event usage. Our swift QR code creation, management and usage tracking
@@ -105,7 +107,7 @@
   <!-- Price Section -->
   <section>
     <div class="price-header">
-      <p><img src="./assets/line 70.png">A <span>price perfect</span> for your needs.</p>
+      <p><img src="./assets/line 70.png" id="price">A <span>price perfect</span> for your needs.</p>
       <p>From catering for your personal, business, event, socials needs, you can be rest assured we have you in mind in
         our
         pricing.</p>
@@ -154,7 +156,7 @@
     <div class="faqs-header">
       <img src="./assets/Group 3.png" class="group3">
       <img src="./assets/Group 2 (1).png" class="group2">
-      <div class="faqs-wrapper">
+      <div class="faqs-wrapper" id="free">
         <p>Paste URL here...</p>
 
         <span id="domain">Choose Domain <img src="./assets/Vector1.svg"></span>
@@ -170,7 +172,7 @@
     </div>
     <div class="faqs-container">
       <div class="faqs">
-        <p><img src="./assets/Line 70.png" alt="">FAQs</p>
+        <p><img src="./assets/Line 70.png" alt="" id="FAQ">FAQs</p>
       </div>
       <div class="faqs-body">
         <p>How does URL shortening work?<img src="./assets/minus.png" alt="Minus image"></p>
@@ -293,6 +295,8 @@
         class="footer-image4">
     </div>
   </section>
+
+ <script src="./index.js"></script>
 </body>
 
 </html>
