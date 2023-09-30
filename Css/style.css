@@ -30,17 +30,27 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
- 
-
 }
-
 
 .nav-container {
   width: 100%;
  display: flex;
  justify-content: space-between;
  padding: 24px;
+ transition: all .20s ease;
  flex-shrink: 0;
+}
+.middle-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-left: 12px;
+}
+.middle-nav p {
+  margin-right: 36px;
+  transition: all .50s ease;
+  cursor: pointer;
 }
 
 .nav-container a {
@@ -64,16 +74,20 @@ body {
   gap: 18px;
 }
 
-.nav-container a:active {
+/* .nav-container a:active {
   color: black;
-}
+} */
 
 .nav-url {
   color: #0065FE;
   margin-right: 12px;
 
 }
-
+a.nav-login {
+  margin-right: 12px;
+  color: #0065FE;
+  text-decoration: none;
+}
 a.nav-free {
   width: 100px;
   background-color: #0065FE;
