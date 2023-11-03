@@ -14,10 +14,11 @@ document.querySelector(href).scrollIntoView({
 )
 }
 // toggle menu
-let menu = document.querySelector('#menu-icon');
+let hamburger = document.querySelector('.hamburger');
 let navbar = document.querySelector(".middle-nav");
 
-menu.onclick=()=>{
-  menu.classList.toggle('bx-x')
-   navbar.classList.toggle("open");
-}
+hamburger.addEventListener('click', ()=>{
+hamburger.classList.toggle('active');
+navbar.classList.toggle('active');
+})
+ 

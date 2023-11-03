@@ -45,7 +45,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin-left: 12px;
+  margin-right: 180px;
 }
 .middle-nav p {
   margin-right: 36px;
@@ -74,10 +74,6 @@ body {
   gap: 18px;
 }
 
-/* .nav-container a:active {
-  color: black;
-} */
-
 .nav-url {
   color: #0065FE;
   margin-right: 12px;
@@ -85,10 +81,12 @@ body {
 }
 a.nav-login {
   margin-right: 12px;
+  margin-left: 60px;
   color: #0065FE;
   text-decoration: none;
 }
 a.nav-free {
+  margin-left: 30px;
   width: 100px;
   background-color: #0065FE;
   color: #fff;
@@ -97,13 +95,19 @@ a.nav-free {
   padding: 12px;
   text-decoration: none;
 }
-
-#menu-icon {
-  font-size: 32px;
-  z-index: 1001;
-  cursor: pointer;
-  color: #0065FE;
+.hamburger{
   display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+  background-color: blue;
 }
 
 main {
@@ -680,46 +684,77 @@ div .basic-container p {
     padding: 12px;
     transition: .20s all ease;
     overflow: hidden;
+    background-image: none;
+    background-color: #071827;
   }
 
-  .middle-nav {
+  /* .middle-nav {
     display: block;
     padding: 5px 0;
     margin: 0px 20px;
-  }
+  } */
 
-  .left-nav {
+  /* .left-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-  }
+  } */
 
-  a.nav-free {
+  /* a.nav-free {
     width: 150px;
     padding: 6px;
     margin-left: 36px;
-  }
+  } */
 
-  #menu-icon {
+ .hamburger {
     display: block;
-    margin-left: 42px;
   }
-
+.hamburger.active .bar:nth-child(2){
+opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
   a.nav-login {
     margin-left: 0;
   }
+  .middle-nav{
+    position: absolute;
+    left: -120%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #071827;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
 
-  /* a.nav-free {
-  width: 72px;
-    padding: 12px;
-    margin-left: 0;
-  } */
+  }
+  .middle-nav.active{
+    left: 0;
+  }
+    .middle-nav p,
+    .middle-nav a {
+      color: white;
+      padding: 6px 0;
+      margin: 0px 20px;
+      text-align: center;
+      transition: all .50s ease;
+    }
+    .optimize, .personalize p{
+      color: #D6D6D6;
+      margin-top: 70px;
+    }
 
   .group {
     display: block;
-    width: 50%;
-    height: auto
+    width: 60%;
+    height: 80%;
+    margin-left: 80px;
   }
 
   .rectangle {
@@ -731,19 +766,20 @@ div .basic-container p {
 
   .ellipse {
     display: block;
-    width: 60%;
-    height: auto
+    width: 70%;
+    height: auto;
+    margin-left: -100px;
   }
 
   /* desktop section */
   .desktop-header {
-    /* max-width: 880px; */
     width: 100%;
 
   }
 
   .desktop-container {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 100px 100px;
     gap: 30px;
     align-items: center;
     object-fit: cover;
@@ -775,7 +811,7 @@ div .basic-container p {
 
   .scissor-container {
     margin-top: 70px;
-    margin-left: 180px;
+    margin-left: 90px;
   }
 
   /* price section */
@@ -785,13 +821,12 @@ div .basic-container p {
   }
 
   .basic {
-    width: 350px;
+    width: 400px;
     margin-bottom: 12px;
+    margin-left: -10px;
     border: 1px solid #005AE2;
     border-radius: 12px;
     padding: 24px;
-    /* position: relative;
-    left: -10px; */
   }
 
   .teams {
@@ -813,10 +848,6 @@ div .basic-container p {
     padding: 24px;
     border-radius: 12px;
   }
-
-  /* .price-ctn{
-          margin-top:100px;
-        } */
 
   /* FAQs section */
   .faqs-header {
@@ -841,7 +872,6 @@ div .basic-container p {
 
   /* footer */
   .footer {
-    /* max-width: 700px; */
     width: 100%;
   }
 
@@ -868,9 +898,9 @@ div .basic-container p {
   }
 }
 
-@media(max-width: 999px) {
-  .middle-nav {
-      position: absolute;
+/* @media(max-width: 999px) {
+   .middle-nav { 
+       position: absolute;
       top: 10%;
       right: -100%;
       width: 200px;
@@ -879,7 +909,7 @@ div .basic-container p {
       border-radius: 10px;
       transition: all .20s ease;
     }
-  
+   
     .middle-nav p,
     .middle-nav a {
       color: white;
@@ -908,4 +938,4 @@ div .basic-container p {
     .middle-nav.open {
       right: 2%;
     }
-  }
+  } */
